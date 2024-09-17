@@ -113,9 +113,8 @@ services:
       - TZ=Etc/UTC
       - JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
     volumes:
-      - /path/to/jellyfin/library:/config
-      - ${CONTAINER_DIR}Sonarr\tvshows:/data/tvshows
-      - ${CONTAINER_DIR}Radarr\Movies:/data/movies
+      - ${CONTAINER_DIR}Jellyfin\Config:/config
+      - ${MEDIA_DIR}Downloads:/data/movies
     ports:
       - 8096:8096
       - 8920:8920 #optional
@@ -129,6 +128,3 @@ networks:
       config:
         - subnet: 173.25.0.0/16
           gateway: 173.25.0.1
-
-
-          ls093762828
