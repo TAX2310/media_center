@@ -46,7 +46,7 @@ services:
       - ${CONTAINER_DIR}Radarr\Config:/config
       - ${CONTAINER_DIR}Radarr\Movies:/data/movies
       - ${CONTAINER_DIR}Radarr\Backup:/data/Backup
-      - ${MEDIA_DIR}:/data/downloads
+      - ${MEDIA_DIR}Movies:/data/downloads
     ports:
       - 7878:7878
     restart: unless-stopped
