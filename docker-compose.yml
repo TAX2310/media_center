@@ -12,7 +12,7 @@ services:
     volumes:
       - ${CONTAINER_DIR}Prowlarr\Config:/config
       - ${CONTAINER_DIR}Prowlarr\Backup:/data/Backup
-      - ${MEDIA_DIR}:/data/downloads
+      - ${MEDIA_DIR}Downloads:/data/downloads
     ports:
       - 9697:9696
     restart: unless-stopped
@@ -63,7 +63,7 @@ services:
       - ${CONTAINER_DIR}Lidarr\Config:/config
       - ${CONTAINER_DIR}Lidarr\Music:/data/musicfolder
       - ${CONTAINER_DIR}Lidarr\Backup:/data/Backup
-      - ${MEDIA_DIR}:/data/downloads
+      - ${MEDIA_DIR}Downloads:/data/downloads
     ports:
       - 8686:8686
     restart: unless-stopped
@@ -79,7 +79,7 @@ services:
     volumes:
       - ${CONTAINER_DIR}Readarr\Config:/config
       - ${CONTAINER_DIR}Readarr\Books:/data/books # optional
-      - ${MEDIA_DIR}:/data/downloads # optional
+      - ${MEDIA_DIR}Downloads:/data/downloads # optional
     ports:
       - 8585:8585
     restart: unless-stopped
