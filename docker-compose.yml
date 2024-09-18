@@ -10,8 +10,8 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - ${CONTAINER_DIR}Prowlarr\Config:/config
-      - ${CONTAINER_DIR}Prowlarr\Backup:/data/Backup
+      - ${CONTAINER_DIR}Prowlarr/Config:/config
+      - ${CONTAINER_DIR}Prowlarr/Backup:/data/Backup
       - ${MEDIA_DIR}Downloads:/data/downloads
     ports:
       - 9697:9696
@@ -43,8 +43,8 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - ${CONTAINER_DIR}Radarr\Config:/config
-      - ${CONTAINER_DIR}Radarr\Backup:/data/Backup
+      - ${CONTAINER_DIR}Radarr/Config:/config
+      - ${CONTAINER_DIR}Radarr/Backup:/data/Backup
       - ${MEDIA_DIR}Movies:/data/movies
       - ${MEDIA_DIR}Downloads:/data/downloads
     ports:
@@ -60,9 +60,9 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - ${CONTAINER_DIR}Lidarr\Config:/config
-      - ${CONTAINER_DIR}Lidarr\Music:/data/musicfolder
-      - ${CONTAINER_DIR}Lidarr\Backup:/data/Backup
+      - ${CONTAINER_DIR}Lidarr/Config:/config
+      - ${CONTAINER_DIR}Lidarr/Music:/data/musicfolder
+      - ${CONTAINER_DIR}Lidarr/Backup:/data/Backup
       - ${MEDIA_DIR}Downloads:/data/downloads
     ports:
       - 8686:8686
@@ -77,8 +77,8 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - ${CONTAINER_DIR}Readarr\Config:/config
-      - ${CONTAINER_DIR}Readarr\Books:/data/books # optional
+      - ${CONTAINER_DIR}Readarr/Config:/config
+      - ${CONTAINER_DIR}Readarr/Books:/data/books # optional
       - ${MEDIA_DIR}Downloads:/data/downloads # optional
     ports:
       - 8585:8585
@@ -113,7 +113,7 @@ services:
       - TZ=Etc/UTC
       - JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
     volumes:
-      - ${CONTAINER_DIR}Jellyfin\Config:/config
+      - ${CONTAINER_DIR}Jellyfin/Config:/config
       - ${MEDIA_DIR}Movies:/data/movies
       - ${MEDIA_DIR}TV-Shows:/data/tv-shows
     ports:
