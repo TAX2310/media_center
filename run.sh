@@ -14,12 +14,14 @@ do
          echo "start"
          docker compose up -d
       fi
+      echo "Downloading"
    else
       if [ $( docker container inspect -f {{.State.Running}} qbittorrent ) = "true" ]
       then
          echo "stop"
          docker stop qbittorrent
       fi
+      echo "Downloading"
    fi
    sleep 5m
 done
