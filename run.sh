@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export $(cat .env | xargs) && env
+echo export $(cat .env | xargs) && env
 echo $START_DOWNLOAD
 while :
 do
