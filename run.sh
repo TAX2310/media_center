@@ -1,5 +1,8 @@
 #!/bin/sh
 
+docker compose up -d
+sleep 5m
+
 while :
 do
    echo "Running"
