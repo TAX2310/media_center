@@ -21,7 +21,7 @@ do
          echo "stop"
          docker stop qbittorrent
       fi
-      echo "Downloading"
+      echo "Downloading Stopped"
    fi
    sleep 5m
 done
