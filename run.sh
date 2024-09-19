@@ -7,7 +7,7 @@ do
    if [ $TIME > 2200 && $TIME < 0800 ]
    then
       echo "start1"
-      if [ $( docker container inspect -f '{{.State.Running}}' $container_name ) != "true" ]
+      if [ $( docker container inspect -f '{{.State.Running}}' $container_name ) = "false" ]
       then
          echo "start"
          #docker compose up -d
