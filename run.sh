@@ -14,7 +14,7 @@ do
       fi
    elif
    then
-   if [ "$( docker container inspect -f '{{.State.Running}}' $container_name )" == "true" ]
+      if [ "$( docker container inspect -f '{{.State.Running}}' $container_name )" == "true" ]
       then
          echo "stop"
          #docker stop qbitorrent
