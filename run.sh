@@ -12,7 +12,7 @@ do
          echo "start"
          #docker compose up-d
       fi
-   elif
+   else
    then
       if [ "$( docker container inspect -f '{{.State.Running}}' $container_name )" == "true" ]
       then
