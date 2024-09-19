@@ -13,6 +13,7 @@ do
          #docker compose up-d
       fi
    elif
+   then
    if [ "$( docker container inspect -f '{{.State.Running}}' $container_name )" == "true" ]
       then
          echo "stop"
