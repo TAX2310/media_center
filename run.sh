@@ -12,7 +12,6 @@ do
          docker compose up -d
       fi
    else
-      echo "stop1"
       if [ $( docker container inspect -f {{.State.Running}} qbittorrent ) = "true" ]
       then
          echo "stop"
