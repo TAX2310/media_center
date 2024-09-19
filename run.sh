@@ -7,17 +7,17 @@ do
    if [ $TIME > 2200 && $TIME < 0800 ]
    then
       echo "start1"
-      if [ $( docker container inspect -f {{.State.Running}} qbitorrent ) = "false" ]
+      if [ $( docker container inspect -f {{.State.Running}} qbittorrent ) = "false" ]
       then
          echo "start"
          #docker compose up -d
       fi
    else
       echo "stop1"
-      if [ $( docker container inspect -f {{.State.Running}} qbitorrent ) = "true" ]
+      if [ $( docker container inspect -f {{.State.Running}} qbittorrent ) = "true" ]
       then
          echo "stop"
-         #docker stop qbitorrent
+         #docker stop qbittorrent
       fi
    fi
    sleep 5m
