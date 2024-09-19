@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export $(cat .env | xargs) && env
-
+echo $START_DOWNLOAD
 while :
 do
    echo "Running"
