@@ -1,13 +1,10 @@
 #!/bin/sh
 
-echo export $(cat .env | xargs) && env
-echo 'test'
-echo $START_DOWNLOAD
 while :
 do
    echo "Running"
    TIME=$(date +%H%M)
-   if [ $TIME -gt $START_DOWNLOAD -o $TIME -lt $END_DOWNLOAD ]
+   if [ $TIME -gt 2200 -o $TIME -lt 8030 ]
    then
       if [ $( docker container inspect -f {{.State.Running}} qbittorrent ) = "false" ]
       then
