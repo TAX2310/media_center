@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo export $(cat .env | xargs) && env
+echo 'test'
 echo $START_DOWNLOAD
 while :
 do
