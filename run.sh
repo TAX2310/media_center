@@ -1,6 +1,6 @@
 #!/bin/sh
 
-while [  ]
+while :
 do
    echo "Running"
    TIME = date +%H%M
