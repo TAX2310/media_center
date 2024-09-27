@@ -85,6 +85,20 @@ services:
     restart: unless-stopped
     networks:
       - media_network
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ${CONTAINER_DIR}Config:/config
+      - ${MEDIA_DIR}Movies:/data/movies
+      - ${MEDIA_DIR}TV-Shows:/data/tv-shows
+    ports:
+      - 6767:6767
+    restart: unless-stopped
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
